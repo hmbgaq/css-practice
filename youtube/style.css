@@ -176,6 +176,7 @@ body > .info {
     text-transform: uppercase;
     color: var(--red-color);
     font-size: var(--font-medium);
+    padding-right: var(--padding);
 }
 
 
