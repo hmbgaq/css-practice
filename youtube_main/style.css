@@ -1,5 +1,6 @@
 :root {
     --grey-light-color: #e0e0e0;
+    --grey-dark-color: #909090;
 
     --padding: 12px;
     --margin: 12px;
@@ -31,19 +32,68 @@ input{
 }
 
 header {
-    padding: var(--padding);
+    /* height: calc(var(--header-height) + var(--margin)*2); */
+    /* padding: var(--padding); */
+    width: 100%;
+    position: fixed;
+}
+
+header .top{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
+    height: calc(var(--header-height) + var(--margin)*3);;
 }
 
-header div {
+header hr{
+    margin-left: 320px;
+}
+
+header .tags{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* margin: calc(var(--margin)); */
+    margin-left: 300px;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+}
+
+header .tags div{
+    height: 32px;
+    min-width: 12px;
+    border-radius: 16px;
+    cursor: pointer;
+
+    padding: calc(var(--padding)/2);
+    margin: calc(var(--margin)/2);
+    background-color: var(--grey-light-color);
+    border: 1px;
+    overflow: hidden;
+}
+
+
+
+header .logo div{
     display: inline-block;
 }
+
+header .search div{
+    display: inline-block;
+}
+
+header .optionsAndLogin div{
+    display: inline-block;
+}
+
+
 
 header .logo .bars{
     margin: var(--margin);
 }
+
 
 header .logo .youtube{
     font-size: 20px;
@@ -67,7 +117,7 @@ header .search .searchInBox{
     width: 100%;
     height: 100%;
     margin-left: 34px;
-    border: 1px solid black;
+    border: 1px solid var(--grey-dark-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,7 +139,7 @@ header .search .searchOutBox{
 }
 
 header .search .searchOutBox .searchButton{
-    border: 1px solid black;
+    border: 1px solid var(--grey-dark-color);
     width: calc(var(--header-height)*1.5);
     background-color: var(--grey-light-color);
 }
@@ -122,6 +172,10 @@ header .optionsAndLogin .loginButton{
     margin: 0 calc(var(--margin)*1.5);
 }
 
+header .optionsAndLogin .loginButton i{
+    margin-right: calc(var(--margin)/2);
+}
+
 
 nav{
     width: 300px;
@@ -129,6 +183,9 @@ nav{
 
     overflow-y: scroll; 
     height: 100vh;
+    margin-top: calc(var(--header-height) + var(--margin)*2);
+    
+    position: fixed;
 
 }
 
@@ -150,7 +207,7 @@ nav li{
 nav .area{
     padding-left: calc(var(--padding)*2);
     font-size: 20px;
-    /* height: 40px; */
+    margin: var(--margin) 0;
 }
 
 nav .area .icon {
@@ -158,7 +215,29 @@ nav .area .icon {
     margin-right: calc(var(--margin)*2);
     
     display: inline-block;
-    justify-items: center;
+}
+
+nav .area .icon i {
+    display: flex;
+    justify-content: center;
+}
+
+nav .login-button{
+    border: 1px solid blue;
+    color: blue;
+
+    width: 125px;
+    padding: var(--padding) calc(var(--padding)*1.5);
+    margin: 0 calc(var(--margin)*1.5);
+    margin-top: var(--margin);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .login-button i {
+    margin: 0 var(--margin);
 }
 
 nav .etc{
@@ -173,35 +252,17 @@ nav .login-button{
 
 
 
-.NavAndMain{
-    display: flex;
-    flex-direction: row;
-}
 
-main{
+
+article{
+    padding-top: calc(var(--header-height) + var(--margin)*3 + 50px);
+    margin-left: 320px;
     width: 100%;
 }
 
-main .tags{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: calc(var(--margin)/2);
-}
 
-main .tags div{
-    height: 32px;
-    min-width: 12px;
-    border-radius: 16px;
-    cursor: pointer;
 
-    padding: calc(var(--padding)/2);
-    margin: calc(var(--margin)/2);
-    background-color: var(--grey-light-color);
-    border: 1px;
-}
-
-main .advertisement{
+article .advertisement{
     width: 100%;
     height: 260px;
     display: flex;
@@ -213,23 +274,41 @@ main .advertisement{
     margin-bottom: calc(var(--margin)*3);
 }
 
+article .advertisement .title{
+    font-size: 25px;
+    
+}
 
-main .videos {
+article .advertisement .title i{
+    color: red;
+}
+
+article .advertisement button{
+    border: 1px solid white;
+    padding: var(--padding);
+    width: 110px;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+article .videos {
     margin: calc(var(--margin));
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-main .videos {
+article .videos {
     margin: calc(var(--margin));
 }
 
-main .videos .video{
+article .videos .video{
     margin: calc(var(--margin));
 }
 
-main .videos .video div{
+article .videos .video div{
     width: 300px;
     height: 190px;
     background-color: black;
