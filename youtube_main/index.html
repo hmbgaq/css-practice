@@ -11,51 +11,108 @@
 <body>
     <header>
         <div class="logo">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fab fa-youtube"></i>
-            <span>youtube</span>
+            <button class="bars">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <button class="youtube">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </button>
+            
         </div>
         <div class="search">
-            <div class="input">
-                <input type="text" placeholder="검색">
-                <button>
-                    <i class="fa-solid fa-keyboard"></i>
+            <div class="searchInBox">
+                <div class="input">
+                    <input type="text" placeholder="검색">
+                </div>
+                <div class="buttons">
+                    <button class="keyboard">
+                        <i class="fa-solid fa-keyboard"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="searchOutBox">
+                <button class="searchButton">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="mic">
+                    <i class="fa-solid fa-microphone"></i>
                 </button>
             </div>
-            <button>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
         </div>
-        <div class="icons">
+        <div class="optionsAndLogin">
             <div class="options">
-                <i class="fas fa-ellipsis-v"></i>
+                <button>
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+                
             </div>
-            <div class="login-button">
-                <i class="fa-regular fa-user"></i>
-                <span>로그인</span>
+            <div class="loginButton">
+                <button>
+                    <i class="fa-regular fa-user"></i>
+                    <span>로그인</span>
+                </button>
             </div>
         </div>
     </header>
 
     <div class="NavAndMain">
         <nav>
-            <div>
-                <ul>
-                    <li>홈</li>
-                    <li>탐색</li>
-                    <li>Shorts</li>
-                    <li>구독</li>
-                </ul>
-            </div>
+            <ul>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <span>홈</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <span>탐색</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-brands fa-youtube-square"></i>
+                        </div>
+                        <span>Shorts</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-address-book"></i>
+                        </div>
+                        <span>구독</span>
+                    </div>
+                </li>
+            </ul>
             <hr>
-            <div>
-                <ul>
-                    <li>보관함</li>
-                    <li>시청 기록</li>
-                </ul>
-            </div>
+            <ul>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-table-list"></i>
+                        </div>
+                        <span>보관함</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <span>시청 기록</span>
+                    </div>
+                </li>
+            </ul>
             <hr>
-            <div>
+            <div class="area">
                 <span>로그인하면 동영상에 좋아요를 표시하고 댓글을 달거나 구독할 수 있습니다.</span>
                 <div class="login-button">
                     <i class="fa-regular fa-user"></i>
@@ -63,44 +120,185 @@
                 </div>
             </div>
             <hr>
-            <div>
+            <div class="area">
                 <span>탐색</span>
-                <ul>
-                    <li>음악</li>
-                    <li>스포츠</li>
-                    <li>게임</li>
-                    <li>영화</li>
-                    <li>뉴스</li>
-                    <li>실시간</li>
-                    <li>학습</li>
-                    <li>360° 동영상</li>
-                </ul>
             </div>
+            <ul>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-music"></i>
+                        </div>
+                        <span>음악</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <span>스포츠</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <span>게임</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-film"></i>
+                        </div>
+                        <span>영화</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-newspaper"></i>
+                        </div>
+                        <span>뉴스</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-tower-broadcast"></i>
+                        </div>
+                        <span>실시간</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <span>학습</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-vr-cardboard"></i>
+                        </div>
+                        <span>360° 동영상</span>
+                    </div>
+                </li>
+            </ul>
             <hr>
-            <div>
-                <span>채널 탐색</span>
-            </div>
+                <div class="area">
+                    <span>채널 탐색</span>
+                </div>
             <hr>
-            <div>
+            <div class="area">
                 <span>YOUTUBE 더보기</span>
-                <ul>
-                    <li>YouTube Premium</li>
-                    <li>YouTube Music</li>
-                    <li>YouTube Kids</li>
-                    <li>YouTube TV</li>          
-                </ul>
             </div>
+            <ul>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-brands fa-youtube-square"></i>
+                        </div>
+                        <span>YouTube Premium</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-brands fa-youtube-square"></i>
+                        </div>
+                        <span>YouTube Music</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-brands fa-youtube-square"></i>
+                        </div>
+                        <span>YouTube Kids</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-brands fa-youtube-square"></i>
+                        </div>
+                        <span>YouTube TV</span>
+                    </div>
+                </li>          
+            </ul>
             <hr>
-            <div>
-                <ul>
-                    <li>설정</li>
-                    <li>신고 기록</li>
-                    <li>고객센터</li>
-                    <li>의견 보내기</li>
-                </ul>
+            <ul>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <span>설정</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-font-awesome"></i>
+                        </div>
+                        <span>신고 기록</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <span>고객센터</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="area">
+                        <div class="icon">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                        
+                        <span>의견 보내기</span>
+                    </div>
+                </li>
+            </ul>
+            <hr>
+            <div class="area">
+                <div class="etc">
+                    <span>정보</span>
+                    <span>보도자료</span>
+                    <span>저작권</span><br>
+                    <span>문의하기</span>
+                    <span>크리에이터</span>
+                    <span>광고</span><br>
+                    <span>개발자</span>
+                    
+                    <br>
+                    <br>
+                    
+                    <span>약관</span>
+                    <span>개인정보처리방침</span><br>
+                    <span>정책 및 안전</span><br>
+                    <span>YouTube 작동의 원리</span><br>
+                    <span>새로운 기능 테스트하기</span>
+                    
+                    <br>
+                    <br>
+        
+                    <span>© 2022 Google LLC</span><br>
+                    <span>CEO: 선다 피차이</span><br>
+                    <span>주소: 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.</span><br>
+                    <span>전화: 080-822-1450(무료)</span><br>
+                </div>
             </div>
             <hr>
         </nav>
+
         <main>
             <hr>
             <div class="tags">

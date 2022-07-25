@@ -4,6 +4,8 @@
     --padding: 12px;
     --margin: 12px;
 
+    --header-height: 40px;
+
     --line-height: 30px;
 
     --font-medium: 14px;
@@ -19,42 +21,157 @@ ul{
     list-style: none;
 }
 
+button{
+    all:unset;
+    cursor: pointer;
+}
+
+input{
+    all:unset
+}
+
 header {
     padding: var(--padding);
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
 }
 
 header div {
     display: inline-block;
+}
+
+header .logo .bars{
+    margin: var(--margin);
+}
+
+header .logo .youtube{
+    font-size: 20px;
     
 }
 
-nav{
-    width: 200px;
-    margin-right: 20px;
+header .logo .youtube i{
+    color: red
 }
 
-nav div{
-    margin: var(--margin);
+header .search{
+    width: 500px;
+    padding: 0 calc(var(--padding)/2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--header-height);
+}
+
+header .search .searchInBox{
+    width: 100%;
+    height: 100%;
+    margin-left: 34px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .search .searchInBox input{
     padding-left: var(--padding);
+    width: 150%;
 }
 
-nav ul{
-    margin-top: var(--margin);
+header .search .searchInBox .keyboard{
+    margin: 0 calc(var(--margin));
+}
+
+header .search .searchOutBox{
+    height: 100%;
+    display: flex;
+    justify-items: center;
+}
+
+header .search .searchOutBox .searchButton{
+    border: 1px solid black;
+    width: calc(var(--header-height)*1.5);
+    background-color: var(--grey-light-color);
+}
+
+header .search .searchOutBox .searchButton i{
+    display: flex;
+    justify-content: center;
+}
+
+header .search .searchOutBox .mic{
+    width: var(--header-height);
+    background-color: var(--grey-light-color);
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+header .search .searchOutBox .mic i{
+    display: flex;
+    justify-content: center;
+}
+
+header .optionsAndLogin .options{
+    margin: var(--margin);
+}
+
+header .optionsAndLogin .loginButton{
+    border: 1px solid blue;
+    color: blue;
+    padding: var(--padding) calc(var(--padding)*1.5);
+    margin: 0 calc(var(--margin)*1.5);
+}
+
+
+nav{
+    width: 300px;
+    margin-right: 20px;
+
+    overflow-y: scroll; 
+    height: 100vh;
+
+}
+
+nav::-webkit-scrollbar{
+    display: none;
+}
+
+nav hr{
+    margin: var(--margin) 0;
 }
 
 nav li{
+    width: 100%;
     line-height: var(--line-height);
     font-size: var(--font-medium);
     cursor: pointer;
+}
+
+nav .area{
+    padding-left: calc(var(--padding)*2);
+    font-size: 20px;
+    /* height: 40px; */
+}
+
+nav .area .icon {
+    width: calc(var(--padding));
+    margin-right: calc(var(--margin)*2);
+    
+    display: inline-block;
+    justify-items: center;
+}
+
+nav .etc{
+    font-size: 15px;
+
 }
 
 nav .login-button{
     margin-left: 0px;
     padding-left: 0px;
 }
+
+
 
 .NavAndMain{
     display: flex;
@@ -113,8 +230,8 @@ main .videos .video{
 }
 
 main .videos .video div{
-    width: 250px;
-    height: 170px;
+    width: 300px;
+    height: 190px;
     background-color: black;
 
 }
