@@ -1,4 +1,8 @@
 :root {
+    --white-color: #fff;
+    --black-color: #140a08;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
     --grey-light-color: #e0e0e0;
     --grey-dark-color: #909090;
 
@@ -6,10 +10,17 @@
     --margin: 12px;
 
     --header-height: 40px;
+    --header-top-height: calc(var(--header-height) + var(--margin)*3.5);
+    --header-tag-height: 50px;
+
+    --nav-width: 300px;
 
     --line-height: 30px;
 
+    --font-large: 18px;
     --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
 }
 
 * {
@@ -31,9 +42,11 @@ input{
     all:unset
 }
 
+body{
+    overflow-x:hidden;
+}
+
 header {
-    /* height: calc(var(--header-height) + var(--margin)*2); */
-    /* padding: var(--padding); */
     width: 100%;
     position: fixed;
 }
@@ -42,39 +55,15 @@ header .top{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    height: calc(var(--header-height) + var(--margin)*3);;
+    background-color: var(--white-color);
+    height: var(--header-top-height);
+    padding-left: 10px;
+    z-index: 3;
 }
 
 header hr{
     margin-left: 320px;
 }
-
-header .tags{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /* margin: calc(var(--margin)); */
-    margin-left: 300px;
-    width: 100%;
-    height: 50px;
-    background-color: white;
-}
-
-header .tags div{
-    height: 32px;
-    min-width: 12px;
-    border-radius: 16px;
-    cursor: pointer;
-
-    padding: calc(var(--padding)/2);
-    margin: calc(var(--margin)/2);
-    background-color: var(--grey-light-color);
-    border: 1px;
-    overflow: hidden;
-}
-
-
 
 header .logo div{
     display: inline-block;
@@ -88,20 +77,18 @@ header .optionsAndLogin div{
     display: inline-block;
 }
 
-
-
 header .logo .bars{
     margin: var(--margin);
 }
 
 
 header .logo .youtube{
-    font-size: 20px;
+    font-size: calc(var(--font-medium)*1.5);
     
 }
 
 header .logo .youtube i{
-    color: red
+    color: var(--red-color);
 }
 
 header .search{
@@ -166,26 +153,52 @@ header .optionsAndLogin .options{
 }
 
 header .optionsAndLogin .loginButton{
-    border: 1px solid blue;
-    color: blue;
+    font-size: var(--font-large);
+    border: 1px solid var(--blue-color);
+    color: var(--blue-color);
     padding: var(--padding) calc(var(--padding)*1.5);
-    margin: 0 calc(var(--margin)*1.5);
+    margin: 0 calc(var(--margin)*1);
 }
 
 header .optionsAndLogin .loginButton i{
     margin-right: calc(var(--margin)/2);
 }
 
+header .tags{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 150px;
+    width: 100%;
+    height: var(--header-tag-height);
+    background-color: var(--white-color);
+    z-index: 1;
+}
+
+header .tags div{
+    height: 32px;
+    min-width: 12px;
+    border-radius: 16px;
+    cursor: pointer;
+
+    padding: calc(var(--padding)/2);
+    margin: calc(var(--margin)/2);
+    background-color: var(--grey-light-color);
+    border: 1px;
+    overflow: hidden;
+}
+
 
 nav{
-    width: 300px;
-    margin-right: 20px;
+    width: var(--nav-width);
 
     overflow-y: scroll; 
     height: 100vh;
-    margin-top: calc(var(--header-height) + var(--margin)*2);
+    margin-top: var(--header-top-height);
     
     position: fixed;
+    z-index: 2;
+    background-color: white;
 
 }
 
@@ -204,10 +217,15 @@ nav li{
     cursor: pointer;
 }
 
+nav li :hover{
+    background-color: var(--grey-light-color);
+}
+
 nav .area{
     padding-left: calc(var(--padding)*2);
     font-size: 20px;
-    margin: var(--margin) 0;
+    padding: var(--padding) 0;
+    padding-left: calc(var(--margin)*2);
 }
 
 nav .area .icon {
@@ -223,8 +241,8 @@ nav .area .icon i {
 }
 
 nav .login-button{
-    border: 1px solid blue;
-    color: blue;
+    border: 1px solid var(--blue-color);
+    color: var(--blue-color);
 
     width: 125px;
     padding: var(--padding) calc(var(--padding)*1.5);
@@ -258,8 +276,12 @@ article{
     padding-top: calc(var(--header-height) + var(--margin)*3 + 50px);
     margin-left: 320px;
     width: 100%;
+    z-index: 0;
 }
 
+article hr{
+    margin: calc(var(--margin)*2) 0;
+}
 
 
 article .advertisement{
@@ -276,11 +298,14 @@ article .advertisement{
 
 article .advertisement .title{
     font-size: 25px;
-    
 }
 
 article .advertisement .title i{
     color: red;
+}
+
+article .advertisement .contents{
+    font-size: 20px;
 }
 
 article .advertisement button{
@@ -294,23 +319,52 @@ article .advertisement button{
 
 
 article .videos {
-    margin: calc(var(--margin));
+    margin: calc(var(--margin)*2);
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow: hidden;
 }
 
-article .videos {
-    margin: calc(var(--margin));
-}
 
 article .videos .video{
     margin: calc(var(--margin));
+    
 }
 
-article .videos .video div{
+article .videos .video .thumbnail{
     width: 300px;
     height: 190px;
     background-color: black;
-
 }
+
+article .videos .video .contents {
+    margin-top: calc(var(--margin)/2);
+    display: flex;
+    width: 300px;
+    height: 100px;
+}
+
+article .videos .video .contents .profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    margin-right: var(--margin);
+    display: inline-block;
+}
+
+
+
+article .videos .video .contents .info .title {
+    font-size: var(--font-large);
+    width: calc(300px - 50px - var(--margin));
+}
+
+article .videos .video .contents .info .writer {
+    font-size: var(--font-medium);
+    width: calc(300px - 50px - var(--margin));
+}
+
+
+
