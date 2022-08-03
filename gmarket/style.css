@@ -1,6 +1,5 @@
 :root {
     --white-color: #fff;
-<<<<<<< HEAD
     --dark-green-color: #10af29;
     --light-green-color: #0abb26;
     
@@ -10,8 +9,6 @@
     --header-height: 113px;
     --min-width: 1200px;
 
-=======
->>>>>>> b69364577b44946ef6e2281c1e81eb384ebcfea6
 }
 
 * {
@@ -29,7 +26,6 @@ button {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
 input {
     all:unset;
 }
@@ -99,19 +95,11 @@ header .head_top .left .middle .right {
 }
 
 header .navigation {
-=======
-/* input {
-    all:unset;
-} */
-
-header .head-top {
->>>>>>> b69364577b44946ef6e2281c1e81eb384ebcfea6
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-<<<<<<< HEAD
 
 main {
     padding-top: var(--header-height);
@@ -196,19 +184,20 @@ main .best ul{
 }
 
 main .best .bestseller .img{
-    width: 150px;
-    height: 150px;
-    background-color: black;
+    width: 200px;
+    height: 200px;
+    background-color: gray;
     border-radius: 50%;
 }
 
+
+
 main .main_market {
     width: 100%;
+    height: 860px;
     padding-top: 64px;
     display: flex;
-    justify-content: space-around;
-
-
+    justify-content: space-between;
 }
 
 main .main_market .expressshop {
@@ -216,30 +205,165 @@ main .main_market .expressshop {
 }
 
 main .main_market .expressshop .title{
-=======
-header .category {
->>>>>>> b69364577b44946ef6e2281c1e81eb384ebcfea6
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;   
     align-items: center;
 }
 
-<<<<<<< HEAD
-main .main_market .item_content {
+main .main_market .smiledelivery{
     width: 574px;
-
-    overflow: hidden;
     padding-left: 52px;
 }
 
-main .smiledelivery{
-    padding-left: 52px;
-}
-
-main .smiledelivery .title{
+main .main_market .smiledelivery .title{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-=======
->>>>>>> b69364577b44946ef6e2281c1e81eb384ebcfea6
+
+
+main .main_market .box {
+    height: 285px;
+    background-color: grey;
+    border-radius: 10px;
+    color: var(--white-color)
+}
+
+main .main_market .box .title {
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    
+}
+
+main .main_market .box .content {
+    height: 234px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .main_market .box .content .prev_button{
+    width: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+main .main_market .box .content .next_button{
+    width: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+main .main_market .box .content .information {
+    width: 442px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .main_market .box .content .information .info_title{
+    font-size: 16px;
+}
+
+main .main_market .box .content .information .info_text{
+    font-size: 30px;
+}
+
+main .main_market .box .content .information .info_subtitle{
+    font-size: 16px;
+    margin: 11px 0px 0px 2px;
+}
+
+
+main .main_market .box .content .information .img {
+    width: 194px;
+    height: 194px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+}
+
+main .main_market .item_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .main_market .items ul{
+    width: 574px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+main .main_market .items .item{
+    width: 280px;
+    height: 100px;
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+}
+
+
+main .main_market .items .item .img {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    border-radius: 5px;
+}
+
+main .main_market .items .item .info {
+    width: 157px;
+    height: 90px;
+}
+
+main .main_market .items .item .info .tag{
+    font-size: 12px;
+    color: gray;
+    line-height: 17px;
+    vertical-align: top;
+}
+
+main .main_market .items .item .info .name{
+    width: 100%;
+    height: 38px;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #444;
+    line-height: 19px;
+}
+
+main .main_market .items .item .info .price{
+    margin-top: 6px;
+    font-size: 12px;
+    color: #222;
+}
+
+main .main_service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .main_service .service{
+    width: 102px;
+    height: 97px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .main_service .service img{
+    width: 68px;
+    height: 68px;
+}
+
+/* main .main_service .service span{
+    display: block;
+} */
