@@ -9,6 +9,7 @@ const right = document.querySelector('main .main_slide .right');
 const moveToTopBtn = document.querySelector('main .product_box .rightquick .moveToTopBtn');
 const moveToBottomBtn = document.querySelector('main .product_box .rightquick .moveToBottomBtn');
 
+
 popular_search_btn.addEventListener('click', (e) => {
     popular_search.classList.toggle('active');
 });
@@ -19,8 +20,6 @@ buttonAll.addEventListener('click', (e) => {
     left.classList.toggle('active');
     right.classList.toggle('active');
 });
-
-
 
 moveToTopBtn.addEventListener('click', (e) => {
     window.scrollTo({ top: 0, behavior: "smooth" });  

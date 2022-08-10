@@ -1,0 +1,69 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* button, input {
+    all:unset
+} */
+
+ul {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+header .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .top .left{
+    display: flex;
+    align-items: center;
+}
+
+header .top .left .search{
+    display: flex;
+    align-items: center;
+}
+
+header .top .left .search .popular_word{
+    border: 1px solid;
+    width: 217px;
+    height: 32px;
+}
+
+header .top .gnb li {
+    float: left;
+}
+
+header .middle { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .middle .right {
+    display: flex;
+}
+
+header .bottom li {
+    float: left;
+
+}
+
+main {
+    display: flex;
+}
+
+main .left_area {
+    width: 270px;
+    border: solid 1px;
+}
