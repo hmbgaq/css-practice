@@ -135,14 +135,53 @@ header .top .mymenu .table{
     height: 30px;
     border: 1px solid;
     margin-left: 78px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
 header .top .popular_search{
     display: none;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 28px;
+    width: 100%;
+    height: 340px;
+    border: 1px solid #b8b8b8;
+    background: #fff;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+header .top .table .popular_search .title {
+    border-bottom: 1px solid #e7e7e7;
+    color: #3a3a3a;
+    font-size: 14px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+header .top .table .popular_search .contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+header .top .popular_search li {
+    margin: 7px;
 }
 
 header .top .popular_search.active{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav {
