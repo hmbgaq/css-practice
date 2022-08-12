@@ -15,49 +15,171 @@ ul {
 header {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    min-width: 1560px;
+    min-height: 32px;
+
 }
 
 header .top{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 79px;
+    min-height: 32px;
+    background-color: black;
+    color: white;
 }
 
 header .top .left{
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
+header .top .left .title{
+    width: 140px;
+    height: 30px;
+    margin-top: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 0 19px;
+}
+
+
 header .top .left .search{
+    width: 490px;
+    height: 30px;
     display: flex;
     align-items: center;
+    
+}
+
+header .top .left .search input{
+    width: 195px;
+    height: 30px;
+    font-size: 12px;
+}
+
+header .top .left .search button{
+    width: 33px;
+    height: 33px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    font-size: 20px;
 }
 
 header .top .left .search .popular_word{
-    border: 1px solid;
     width: 217px;
     height: 32px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 14px;
 }
 
 header .top .gnb li {
     float: left;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 10px;
+
 }
+
+header .top .gnb .seasson_off {
+    color: rgb(0, 145, 250);
+}
+
+header .top .gnb .holiday_specials {
+    color: rgb(0, 212, 123);
+}
+
+header .top .gnb .VR_Room {
+    color: rgb(88, 0, 255);
+}
+
+
 
 header .middle { 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 50px;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0 5px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
 }
+
+header .middle span{
+    padding: 5px;
+    font-weight: bold;
+ }
 
 header .middle .right {
     display: flex;
+    align-items: center;
+}
+
+header .middle .right .raffle {
+    color: #0078ff;
+}
+
+header .bottom {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 8px;
+    font-size: 12px;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+header .bottom .login{
+    border: 1px solid;
+    width: 150px;
+    height: 28px;
+    margin: 0 3px 0 7px;
+    padding-top: 1px;
+    border: 1px solid #000;
+    line-height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header .bottom li{
+    padding: 0 9px 0 8px;
 }
 
 header .bottom li {
     float: left;
-
 }
+
+header .bottom .direct_on{
+    color: #00a3ff;
+}
+
+header .bottom .like{
+    color: red;
+}
+
+header .bottom .member{
+    color: #048eff;
+}
+
+header .bottom .count{
+    padding: 2px 6px 2px 6px;
+    border-radius: 50%;
+    background-color: #0078ff;
+    font-size: 11px;
+    color: white;
+}
+
 
 main {
     display: flex;
@@ -65,5 +187,64 @@ main {
 
 main .left_area {
     width: 270px;
-    border: solid 1px;
+    border-right: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+main .left_area .button_top {
+    width: 240px;
+    margin: 0 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .left_area .button_top button{
+    width: 120px;
+    height: 40px;
+    border: 1px solid #ddd;
+    color: #b2b2b2;
+    font-weight: bold;
+}
+
+main .left_area .button_top .category_btn{
+    color: #000;
+    background-color: #fff;
+    border-bottom: none;
+}
+
+main .left_area .category{
+    border-top: none;
+    padding: 0 10px;
+}
+
+main .left_area .category ul li{
+    /* line-height: 31px; */
+    padding: 10px 0 8px;
+    border-bottom: 1px solid #b2b2b2;
+    font-weight: bold;
+}
+
+main .left_area .category ul li .eng{
+    color: #b2b2b2;
+    font-size: 12px;
+}
+
+
+main .left_area .button_bottom{
+    width: 240px;
+    /* margin: 0 15px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .left_area .button_bottom button{
+    width: 50px;
+    height: 40px;
+    border: 1px solid #ddd;
+    color: #b2b2b2;
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 0px;
 }
