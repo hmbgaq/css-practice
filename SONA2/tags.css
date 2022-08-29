@@ -1,0 +1,14 @@
+div {
+    box-sizing: border-box;
+}
+
+ul {
+    all:unset;
+    list-style: none;
+    word-break: break-all;
+}
+
+input, button{
+    all:unset;
+    background-color: white;
+}
