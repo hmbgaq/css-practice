@@ -70,24 +70,81 @@ nav .delivery {
     border-radius: 1rem;
 } 
 
-/* article .slide-area {
-    background-color: white;
-} */
 
-article .img {
-    width: 3rem;
-    height: 3rem;
-    border: 1px solid rgb(115, 128, 0);
+article {
+    display: flex;
+    justify-content: center;
 }
 
-/* article .recommend {
-    background-color: white;
-    height: 20%;
+
+
+article .slide-area {
+    position: relative;
+    background-color: gray;
+
 }
 
-article .cards-area {
+article .slide-area > img {
+    width: 30rem;
+    height: 40rem;
+}
+
+article .slide-area > button {
+    position: absolute;
     background-color: white;
-} */
+    width: 5rem;
+    height: 5rem;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 1000;
+    font-size: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+article .slide-area > .left-button {
+    right: 95%;
+}
+
+article .slide-area > .right-button {
+    left: 95%;
+}
+
+
+article .recommend {
+    margin-top: 7rem;
+    /* min-width: var(--top-menu-width); */
+    width: 50%;
+    height: 5rem;
+    background-color: white;
+
+}
+
+article .recommend > *{
+    float: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+article .taps {
+    margin-left: 0.5rem;
+    width: 50%;
+    height: 5rem;
+    background-color: white;
+}
+
+article .taps > div{
+    float: left;
+}
+
+article .taps > div > *{
+    display: inline-block;
+}
+
 
 footer .footer-top {
     width: 100%;
@@ -97,7 +154,6 @@ footer .footer-top {
 footer .blocks {
     width: 50%;
     height: 70%;
-    /* background-color: white; */
 }
 
 footer .blocks > .block {
