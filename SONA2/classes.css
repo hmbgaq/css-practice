@@ -97,11 +97,37 @@
 }
 
 [class ~= "tap"] {
-    width: 5rem;
+    width: 6rem;
     height: 3rem;
-    margin: 0 0.5rem;
+    margin-right: 0.5rem;
     background-color: gray;
     color: white;
     border-radius: 2rem;
 }
 
+[class ~= "card"] {
+    display: inline-block;
+    float: left;
+    width: 17%;
+    height: 20rem;
+    margin-right: 2rem;
+    margin-bottom: 6rem;
+    border: 1px solid black;
+    color: white;
+}
+
+[class ~= "card"] > img{
+    width: 100%;
+    height: 14rem;
+    background-color: gray;
+    border-radius: 1rem;
+}
+
+[class ~= "round"] {
+    border-radius: 50%;
+}
+
+[class ~= "round"] > * {
+    width: 100%;
+    height: 100%;
+}

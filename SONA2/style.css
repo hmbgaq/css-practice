@@ -76,8 +76,6 @@ article {
     justify-content: center;
 }
 
-
-
 article .slide-area {
     position: relative;
     background-color: gray;
@@ -114,9 +112,39 @@ article .slide-area > .right-button {
 }
 
 
+article .products-area{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+article .products-area > .quick{
+    position: absolute;
+    left: 73%;
+    top: 7%;
+    background-color: gray;
+}
+
+article .products-area > .quick > .round{
+    width: 7rem;
+    height: 7rem;
+    margin: 1rem;
+    background-color: white;
+    border: 1px solid gray;
+    font-size: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
 article .recommend {
     margin-top: 7rem;
-    /* min-width: var(--top-menu-width); */
     width: 50%;
     height: 5rem;
     background-color: white;
@@ -131,19 +159,27 @@ article .recommend > *{
 
 
 article .taps {
-    margin-left: 0.5rem;
     width: 50%;
     height: 5rem;
     background-color: white;
 }
 
-article .taps > div{
+article .taps > div {
     float: left;
 }
 
-article .taps > div > *{
+article .taps > div > * {
     display: inline-block;
 }
+
+
+article .cards {
+    min-width: var(--top-menu-width);
+    width: 50%;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
 
 
 footer .footer-top {
